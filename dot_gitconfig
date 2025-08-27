@@ -142,8 +142,10 @@
 
 [credential "https://github.com"]
     username = nikiforovall
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
 [credential]
-    helper = store
+	helper = store
 
 # URL shorthands
 # See `git help config` and search for "url.<base>"
@@ -166,3 +168,6 @@
 # gist: is a shofthand for git://gist.github.com/
 [url "git://gist.github.com/"]
     insteadOf = "gist:"
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/usr/bin/gh auth git-credential
